@@ -31,6 +31,7 @@ func main() {
     if info.Mode()&os.ModeCharDevice != 0 {
         fmt.Println("The command is intended to work with pipes.") 
         fmt.Println("Useage: fortune | rainbow")
+        os.Exit(1)
     }
 
     reader := bufio.NewReader(os.Stdin)
